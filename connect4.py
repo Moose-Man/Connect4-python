@@ -46,19 +46,16 @@ else:
              print(counter)
              if counter < 6 and counter > 0 and Placed is False:
                  if ConnectTable[counter][diskLocation] != 1:
-                     print(1)
                      ConnectTable[counter-1][diskLocation] = disk
                      Placed = True
                      diskRow = counter-1
                   # Check if the final space is taken. If so, add the disk in the space above.
                  elif ConnectTable[5][diskLocation] != 1 and ConnectTable[4][diskLocation] == 1:
-                     print(2)
                      ConnectTable[4][diskLocation] = disk
                      diskRow = 4
                      Placed = True
                      # if not, place in the final space
                  elif Placed is False and counter == 5:
-                     print(3)
                      ConnectTable[5][diskLocation] = disk
                      diskRow = 5
                      Placed = True
