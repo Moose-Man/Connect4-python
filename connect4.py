@@ -43,7 +43,6 @@ else:
     # CHECK IF COL HAS SPACE FOR ENTRY AND ADD DISK IN SELECTED COLUMN
 
         for counter in range(6):
-             print(counter)
              if counter < 6 and counter > 0 and Placed is False:
                  if ConnectTable[counter][diskLocation] != 1:
                      ConnectTable[counter-1][diskLocation] = disk
